@@ -1,0 +1,79 @@
+:root{
+  --accent:#ff3c00;
+  --bg:#f4f5f7;
+  --card:#ffffff;
+  --text:#222;
+  --muted:#666;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:1rem;
+}
+
+/* HEADER AVEC PHOTO EN ARRIÈRE-PLAN RECADRÉE ET ZOOM */
+.site-header {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('moi.jpg') no-repeat center 30%;
+  background-size: 110%;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  color: #ddd;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* NAVIGATION */
+.nav{background:#222}
+.nav .container{display:flex;gap:0.5rem;flex-wrap:wrap}
+.nav a{
+  color:white;
+  text-decoration:none;
+  padding:0.75rem 1rem;
+  display:inline-block;
+}
+.nav a:hover{background:var(--accent);}
+
+/* SECTIONS & CARDS */
+.section{background:var(--card);border-radius:10px;padding:1rem;margin:1.4rem 0;box-shadow:0 2px 10px rgba(0,0,0,0.06)}
+.section h2{margin-top:0;border-left:6px solid var(--accent);padding-left:10px}
+
+.card{background:#fff;padding:0.9rem;border-radius:8px;margin:0.6rem 0;box-shadow:0 1px 5px rgba(0,0,0,0.04)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.article-card .excerpt{color:var(--muted);margin-bottom:0.6rem}
+button{background:var(--accent);border:none;color:white;padding:0.5rem 0.75rem;border-radius:6px;cursor:pointer}
+button:hover{opacity:0.95}
+
+.filters{display:flex;gap:0.5rem;margin-bottom:1rem}
+.filter-btn{background:#eee;color:#111;padding:0.4rem 0.6rem;border-radius:6px;border:none;cursor:pointer}
+.filter-btn.active{background:var(--accent);color:white}
+
+/* FOOTER */
+.site-footer{background:#111;color:#ddd;padding:1rem;text-align:center}
+
+/* MODAL */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.5);z-index:50}
+.modal.hidden{display:none}
+.modal-panel{background:white;padding:1rem 1.25rem;border-radius:10px;max-width:720px;width:90%;position:relative}
+.close-btn{position:absolute;right:8px;top:8px;border:none;background:transparent;font-size:1.6rem;cursor:pointer}
+.meta{color:var(--muted);font-size:0.9rem;margin-top:0}
