@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Contact — Force & Motivation</title>
+  <title>Contact â€” Force & Motivation</title>
   <meta name="description" content="Contacte-nous pour toute question sur les programmes, la nutrition ou le site.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <nav class="nav">
@@ -20,8 +20,8 @@
         <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
       <div class="nav__search">
-        <input id="site-search" type="search" placeholder="Rechercher…" aria-label="Rechercher sur le site">
-        <button id="search-btn" aria-label="Lancer la recherche">🔍</button>
+        <input id="site-search" type="search" placeholder="Rechercherâ€¦" aria-label="Rechercher sur le site">
+        <button id="search-btn" aria-label="Lancer la recherche">ðŸ”</button>
       </div>
     </div>
   </nav>
@@ -29,8 +29,8 @@
   <div id="search-overlay" class="search-overlay" hidden>
     <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
       <div class="search-panel__top">
-        <h2 id="search-title">Résultats de recherche</h2>
-        <button id="search-close" class="close-btn" aria-label="Fermer">✕</button>
+        <h2 id="search-title">RÃ©sultats de recherche</h2>
+        <button id="search-close" class="close-btn" aria-label="Fermer">âœ•</button>
       </div>
       <ul id="search-results" class="results"></ul>
     </div>
@@ -40,7 +40,7 @@
     <h1>Contact</h1>
 
     <div class="card">
-      <p>Écris-nous directement : <a href="mailto:superoeilmalicieux@gmail.com">superoeilmalicieux@gmail.com</a></p>
+      <p>Ã‰cris-nous directement : <a href="mailto:superoeilmalicieux@gmail.com">superoeilmalicieux@gmail.com</a></p>
     </div>
 
     <form class="card form" action="mailto:superoeilmalicieux@gmail.com" method="post" enctype="text/plain">
@@ -48,11 +48,11 @@
       <label>Email<br><input type="email" name="email" required></label>
       <label>Message<br><textarea name="message" rows="6" required></textarea></label>
       <button class="btn" type="submit">Envoyer</button>
-      <p class="muted">Astuce : je peux basculer ce formulaire sur Formspree si tu préfères (sans backend).</p>
+      <p class="muted">Astuce : je peux basculer ce formulaire sur Formspree si tu prÃ©fÃ¨res (sans backend).</p>
     </form>
   </main>
 
-  <footer class="footer"><div class="container"><small>© <span id="year"></span> Force &amp; Motivation</small></div></footer>
+  <footer class="footer"><div class="container"><small>Â© <span id="year"></span> Force &amp; Motivation</small></div></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="js/search.js"></script>
 </body>
