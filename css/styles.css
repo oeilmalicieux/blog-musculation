@@ -13,7 +13,7 @@ html, body { margin: 0; padding: 0; }
   --brand: #76baff;
 }
 
-/* Respecter l'attribut HTML hidden (notamment pour l'overlay recherche) */
+/* Respecter l'attribut HTML hidden (overlay, etc.) */
 [hidden]{ display:none !important; }
 
 /* ===========================
@@ -103,7 +103,7 @@ small{ color: var(--muted); }
 }
 
 /* ===========================
-   HERO (page d'accueil)
+   HERO (accueil)
 =========================== */
 .hero{
   padding:3rem 0 2rem;
@@ -194,11 +194,24 @@ mark{
   gap:1rem; align-items:start;
 }
 .profile__media{ margin:0; }
-.profile__img{
-  width:140px; height:140px; object-fit:cover;
-  border-radius:12px; border:1px solid var(--border);
-  background:#111;
+
+/* ---- Option B : encadrement soigné ---- */
+.profile__frame{
+  padding: 10px;                         /* espace cadre ↔ image */
+  border-radius: 16px;
+  background: linear-gradient(180deg, #121212 0%, #0b0b0b 100%);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  display: inline-block;                 /* dimension au contenu */
 }
+.profile__img{
+  display:block;
+  width:140px; height:140px;             /* taille de la photo */
+  object-fit: cover;
+  border-radius:12px;                     /* angles un peu moins arrondis que le cadre */
+  border:2px solid #1f1f1f;              /* léger trait autour de l’image */
+}
+
 .profile__title{ margin:0 0 .4rem; }
 .profile__text{ margin:0 0 .6rem; }
 
@@ -213,7 +226,7 @@ mark{
 #cusdis_thread{ max-width:100%; }
 #cusdis_thread iframe{ width:100%; min-height:360px; }
 
-/* (Si un autre système de commentaires est utilisé, on garde la compatibilité) */
+/* Compatibilité éventuelle */
 .commentbox, .utterances{ max-width:100%; }
 
 /* ===========================
