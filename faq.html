@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Contact — Force & Motivation</title>
-  <meta name="description" content="Contacte-nous pour toute question sur les programmes, la nutrition ou le site.">
+  <title>FAQ — Force & Motivation</title>
+  <meta name="description" content="Questions fréquentes sur la musculation : programmes, fréquences, nutrition.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="styles.css">
@@ -16,8 +16,8 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="actus.html">Actus</a></li>
         <li><a href="articles.html">Articles</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="faq.html" aria-current="page">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav__search">
         <input id="site-search" type="search" placeholder="Rechercher…" aria-label="Rechercher sur le site">
@@ -37,19 +37,27 @@
   </div>
 
   <main class="container section">
-    <h1>Contact</h1>
+    <h1>FAQ</h1>
 
-    <div class="card">
-      <p>Écris-nous directement : <a href="mailto:superoeilmalicieux@gmail.com">superoeilmalicieux@gmail.com</a></p>
-    </div>
+    <details class="card">
+      <summary>Je débute : quel programme choisir ?</summary>
+      <p>Un full-body 3×/semaine pendant 8–12 semaines, focus technique et progression linéaire.</p>
+    </details>
 
-    <form class="card form" action="mailto:superoeilmalicieux@gmail.com" method="post" enctype="text/plain">
-      <label>Nom<br><input type="text" name="nom" required></label>
-      <label>Email<br><input type="email" name="email" required></label>
-      <label>Message<br><textarea name="message" rows="6" required></textarea></label>
-      <button class="btn" type="submit">Envoyer</button>
-      <p class="muted">Astuce : je peux basculer ce formulaire sur Formspree si tu préfères (sans backend).</p>
-    </form>
+    <details class="card">
+      <summary>Combien de séances par semaine ?</summary>
+      <p>3–5 séances suffisent selon ton niveau et ta récupération. Garde 1–2 jours de repos.</p>
+    </details>
+
+    <details class="card">
+      <summary>Combien de protéines par jour ?</summary>
+      <p>Repères généraux : 1.6 à 2.2 g/kg/jour, à adapter selon objectifs et tolérance.</p>
+    </details>
+
+    <details class="card">
+      <summary>Dois-je m’entraîner tous les jours ?</summary>
+      <p>Non. La progression vient de l’alternance charge/récupération. Mieux vaut la régularité.</p>
+    </details>
   </main>
 
   <footer class="footer"><div class="container"><small>© <span id="year"></span> Force &amp; Motivation</small></div></footer>

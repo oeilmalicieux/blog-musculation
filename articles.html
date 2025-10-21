@@ -1,52 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Force & Motivation — Articles</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8">
+  <title>Articles — Force & Motivation</title>
+  <meta name="description" content="Guides d'entraînement, programmes, nutrition et conseils pratiques pour la musculation.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Force & Motivation</h1>
-      <p class="subtitle">Blog Musculation — Programmes · Nutrition · Motivation</p>
-    </div>
-  </header>
-
   <nav class="nav">
-    <div class="container">
-      <a href="index.html">Accueil</a>
-      <a href="programmes.html">Programmes</a>
-      <a href="nutrition.html">Nutrition</a>
-      <a href="articles.html">Articles</a>
-      <a href="contact.html">Contact</a>
+    <div class="container nav__row">
+      <a href="index.html" class="brand">Force &amp; Motivation</a>
+      <ul class="nav__links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actus.html">Actus</a></li>
+        <li><a href="articles.html" aria-current="page">Articles</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__search">
+        <input id="site-search" type="search" placeholder="Rechercher…" aria-label="Rechercher sur le site">
+        <button id="search-btn" aria-label="Lancer la recherche">🔍</button>
+      </div>
     </div>
   </nav>
 
+  <div id="search-overlay" class="search-overlay" hidden>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
+      <div class="search-panel__top">
+        <h2 id="search-title">Résultats de recherche</h2>
+        <button id="search-close" class="close-btn" aria-label="Fermer">✕</button>
+      </div>
+      <ul id="search-results" class="results"></ul>
+    </div>
+  </div>
+
   <main class="container section">
-    <h2>Articles récents</h2>
-    <article>
-      <h3>5 erreurs classiques en muscu</h3>
-      <p>Découvre les erreurs qui freinent ta progression et comment les corriger.</p>
-    </article>
-    <article>
-      <h3>Comment calculer ses besoins caloriques</h3>
-      <p>Formule simple pour estimer tes besoins et adapter ton alimentation.</p>
-    </article>
-    <article>
-      <h3>Rester motivé toute l'année</h3>
-      <p>Techniques simples et habitudes qui améliorent l'adhérence à long terme.</p>
-    </article>
+    <h1>Articles</h1>
+
+    <div class="grid-3">
+      <article id="fullbody" class="card">
+        <h2>Full-body 3×/semaine : le guide</h2>
+        <p>Structure, exercices clés, volumes et progressions pour démarrer efficacement.</p>
+        <a class="link" href="#fullbody">Lire</a>
+      </article>
+
+      <article id="progression" class="card">
+        <h2>Progression linéaire sans se blesser</h2>
+        <p>Comment augmenter la charge/intensité en gardant une technique solide.</p>
+        <a class="link" href="#progression">Lire</a>
+      </article>
+
+      <article id="proteines" class="card">
+        <h2>Combien de protéines par jour ?</h2>
+        <p>Repères simples (1.6–2.2 g/kg/j), répartition et exemples alimentaires.</p>
+        <a class="link" href="#proteines">Lire</a>
+      </article>
+
+      <article id="nutrition" class="card">
+        <h2>Menus types pour prise de muscle</h2>
+        <p>Exemples de journées alimentaires selon ton poids et ton objectif.</p>
+        <a class="link" href="#nutrition">Lire</a>
+      </article>
+
+      <article id="recuperation" class="card">
+        <h2>Récupération : sommeil, stress, mobilité</h2>
+        <p>Optimiser la récupération pour progresser plus vite et éviter le surmenage.</p>
+        <a class="link" href="#recuperation">Lire</a>
+      </article>
+
+      <article id="materiel" class="card">
+        <h2>Matériel minimal pour s'entraîner</h2>
+        <p>Ce qu’il faut vraiment (et ce qui est optionnel) à la maison comme en salle.</p>
+        <a class="link" href="#materiel">Lire</a>
+      </article>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Force & Motivation — Blog Musculation</p>
-    </div>
-  </footer>
-
-  <script src="js/main.js" defer></script>
-  <script src="js/auth.js" defer></script>
+  <footer class="footer"><div class="container"><small>© <span id="year"></span> Force &amp; Motivation</small></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/search.js"></script>
 </body>
 </html>

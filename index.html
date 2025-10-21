@@ -1,41 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
   <title>Force & Motivation — Accueil</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Programmes de musculation, actus, articles et FAQ pour progresser efficacement.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Force & Motivation</h1>
-      <p class="subtitle">Blog Musculation — Programmes · Nutrition · Motivation</p>
-    </div>
-  </header>
-
+  <!-- NAV -->
   <nav class="nav">
-    <div class="container">
-      <a href="index.html">Accueil</a>
-      <a href="programmes.html">Programmes</a>
-      <a href="nutrition.html">Nutrition</a>
-      <a href="articles.html">Articles</a>
-      <a href="contact.html">Contact</a>
+    <div class="container nav__row">
+      <a href="index.html" class="brand">Force &amp; Motivation</a>
+      <ul class="nav__links">
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="actus.html">Actus</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav__search">
+        <input id="site-search" type="search" placeholder="Rechercher…" aria-label="Rechercher sur le site">
+        <button id="search-btn" aria-label="Lancer la recherche">🔍</button>
+      </div>
     </div>
   </nav>
 
+  <!-- Overlay résultats recherche -->
+  <div id="search-overlay" class="search-overlay" hidden>
+    <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
+      <div class="search-panel__top">
+        <h2 id="search-title">Résultats de recherche</h2>
+        <button id="search-close" class="close-btn" aria-label="Fermer">✕</button>
+      </div>
+      <ul id="search-results" class="results"></ul>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Musculation simple, efficace et durable</h1>
+      <p>Programmes clairs, conseils nutrition et actus pour t’aider à progresser.</p>
+      <p><a class="btn" href="articles.html">Découvrir les articles</a></p>
+    </div>
+  </header>
+
   <main class="container section">
-    <h2>Bienvenue sur le blog</h2>
-    <p>Découvre des conseils pour progresser en musculation, améliorer ta nutrition et rester motivé toute l'année !</p>
+    <section class="grid-3">
+      <article class="card">
+        <h2>Débuter en force</h2>
+        <p>Les bases du full-body, la bonne technique et une progression réaliste.</p>
+        <a href="articles.html#debuter" class="link">Lire</a>
+      </article>
+      <article class="card">
+        <h2>Nutrition pratique</h2>
+        <p>Protéines, calories et exemples de menus pour accompagner l’entraînement.</p>
+        <a href="articles.html#nutrition" class="link">Lire</a>
+      </article>
+      <article class="card">
+        <h2>Dernières actus</h2>
+        <p>News du site, nouveaux programmes, annonces et mises à jour.</p>
+        <a href="actus.html" class="link">Voir les actus</a>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Articles mis en avant</h2>
+      <div class="list">
+        <a class="list-item" href="articles.html#fullbody">Full-body 3×/semaine : le guide</a>
+        <a class="list-item" href="articles.html#progression">Progression linéaire sans se blesser</a>
+        <a class="list-item" href="articles.html#proteines">Combien de protéines par jour ?</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container">
-      <p>© 2025 Force & Motivation — Blog Musculation</p>
+      <small>© <span id="year"></span> Force &amp; Motivation — Tous droits réservés.</small>
     </div>
   </footer>
 
-  <script src="js/main.js" defer></script>
-  <script src="js/auth.js" defer></script>
+  <script>
+    // année courante pour le footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/search.js"></script>
 </body>
 </html>
