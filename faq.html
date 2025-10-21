@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- NAV -->
   <nav class="nav">
     <div class="container nav__row">
       <a href="index.html" class="brand">Force &amp; Motivation</a>
@@ -26,6 +27,7 @@
     </div>
   </nav>
 
+  <!-- Overlay résultats recherche -->
   <div id="search-overlay" class="search-overlay" hidden>
     <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
       <div class="search-panel__top">
@@ -44,19 +46,35 @@
       <p>Un full-body 3×/semaine pendant 8–12 semaines, focus technique et progression linéaire.</p>
     </details>
 
+    <details class="card">
+      <summary>Combien de séances par semaine ?</summary>
+      <p>3–5 séances suffisent selon ton niveau et ta récupération. Garde 1–2 jours de repos.</p>
+    </details>
+
+    <details class="card">
+      <summary>Combien de protéines par jour ?</summary>
+      <p>Repères généraux : 1.6 à 2.2 g/kg/jour, à adapter selon objectifs et tolérance.</p>
+    </details>
+
+    <details class="card">
+      <summary>Dois-je m’entraîner tous les jours ?</summary>
+      <p>Non. La progression vient de l’alternance charge/récupération. Mieux vaut la régularité.</p>
+    </details>
+
     <!-- Commentaires (Cusdis) -->
     <section class="section">
-      <h2>Commentaires</h2>
+      <h2 id="comments">Commentaires</h2>
       <div class="card">
         <div id="cusdis_thread"
              data-host="https://cusdis.com"
              data-app-id="498e44e2-d4dd-4102-8d57-0374b46a33ca"
              data-page-id="faq"
-             data-page-url="https://oeilmalicieux.github.io/blog-musculation/faq.html"
-             data-page-title="FAQ — Force & Motivation"
              data-theme="dark"></div>
       </div>
+
+      <!-- Script Cusdis (doit être APRÈS le conteneur) -->
       <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
       <p class="muted">Les commentaires sont anonymes (pas de compte requis).</p>
     </section>
   </main>
@@ -66,7 +84,11 @@
       <small>© <span id="year"></span> Force &amp; Motivation</small>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    // année courante pour le footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
   <script src="js/search.js"></script>
 </body>
 </html>
