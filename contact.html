@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Contact — Force & Motivation</title>
-  <meta name="description" content="Contacte-nous pour toute question sur les programmes, la nutrition ou le site.">
+  <meta name="description" content="Contacte-moi pour toute question sur les programmes, la nutrition ou le site.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="css/styles.css">
@@ -39,15 +39,37 @@
   <main class="container section">
     <h1>Contact</h1>
 
+    <!-- Qui je suis -->
+    <section class="card profile">
+      <figure class="profile__media">
+        <img src="images/moi.jpg" alt="Photo de profil de l’auteur du site" class="profile__img">
+      </figure>
+      <div class="profile__body">
+        <h2 class="profile__title">Qui je suis</h2>
+        <p class="profile__text">
+          Salut, moi c’est <strong>oeilmalicieux</strong> 👋. Passionné de musculation simple et efficace,
+          j’aide les débutants à progresser sans se blesser : programmes clairs, technique propre, et
+          repères nutrition faciles à suivre. Sur ce site, je partage mes conseils, mes retours d’expérience
+          et des ressources pratiques pour t’accompagner dans la durée.
+        </p>
+        <p class="profile__text muted">
+          Envie d’échanger ou de proposer un sujet d’article ? Écris-moi juste en dessous !
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact direct -->
     <div class="card">
-      <p>Écris-nous directement : <a href="mailto:superoeilmalicieux@gmail.com">superoeilmalicieux@gmail.com</a></p>
+      <p>Écris-moi directement : <a href="mailto:superoeilmalicieux@gmail.com">superoeilmalicieux@gmail.com</a></p>
     </div>
 
+    <!-- Formulaire -->
     <form class="card form" action="mailto:superoeilmalicieux@gmail.com" method="post" enctype="text/plain">
       <label>Nom<br><input type="text" name="nom" required></label>
       <label>Email<br><input type="email" name="email" required></label>
       <label>Message<br><textarea name="message" rows="6" required></textarea></label>
       <button class="btn" type="submit">Envoyer</button>
+      <p class="muted">Astuce : je peux basculer ce formulaire sur Formspree (envoi sans logiciel mail) si tu préfères.</p>
     </form>
   </main>
 
